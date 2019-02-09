@@ -6,6 +6,10 @@ class ProductSizeInline(admin.TabularInline):
     form = ProductSizeForm
     model = ProductSize
 
+@admin.register(Client)
+class ClientAdmin(admin.ModelAdmin):
+    fields=[]
+
 class ProductSaleInline(admin.TabularInline):
     form = ProductSaleForm
     model = ProductSale
