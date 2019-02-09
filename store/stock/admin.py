@@ -1,12 +1,13 @@
 from django.contrib import admin
 from .models import *
-from .forms import ProductSizeForm
+from .forms import ProductSizeForm, ProductSaleForm
 
 class ProductSizeInline(admin.TabularInline):
     form = ProductSizeForm
     model = ProductSize
 
 class ProductSaleInline(admin.TabularInline):
+    form = ProductSaleForm
     model = ProductSale
 
 @admin.register(Product)
